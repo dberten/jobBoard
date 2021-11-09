@@ -1,0 +1,425 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .90);
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.navigation {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    height: 66px;
+    background: #2596be;
+}
+ 
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+li{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a:hover,
+nav a.active {
+    color: white;
+}
+
+.logo {
+    width: 20%;
+    float: left;
+    flex-shrink: 0;
+    line-height: 66px;
+}
+
+.menu {
+    width: 60%;
+    float: right;
+    line-height: 66px;
+}
+
+.menuLite {
+    width: 60%;
+    line-height: 66px;
+    display: none;
+}
+
+.account {
+    width: 20%;
+    float: right;
+    flex-shrink: 0;
+    line-height: 66px;
+}
+
+.accountLite {
+    width: 20%;
+    line-height: 66px;
+    display: none;
+}
+
+.logo a,
+.account a {
+    padding: 12px;
+    opacity: .6;
+}
+
+.logo a:hover,
+.account a:hover {
+    opacity: 1;
+}
+
+.div1 {
+    width: 100%;
+    height: 66px;
+}
+
+.div2 {
+    position: fixed;
+    right: 0em;
+    display: none;
+    align-content: center;
+    width: 42%;
+    padding: 1em 1em 1em 1em;
+}
+
+.div3 {
+    z-index: 2;
+    position: fixed;
+    right: 0em;
+    display: none;
+    align-content: center;
+    vertical-align: top;
+    width: 42%;
+    padding: 1em 1em 1em 1em;
+}
+
+#jobsearch_nav,
+#resultsBody {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: rgb(255, 100, 100);
+}
+
+#jobsearch_nav {
+    height: 320px;
+    padding: 1rem 1rem 0rem 1rem;
+    margin-top: 10vh;
+}
+
+#searchContent {
+    width: 998px;
+    height: 100%;
+    border-radius: 15px;
+    background: rgb(235, 235, 235);
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+#resultsBody {
+    padding: 1rem;
+}
+
+#resultsBodyContent {
+    width: 998px;
+}
+
+#resultsCol {
+    vertical-align: top;
+    width: 60%;
+    background: rgb(245, 245, 245);
+    border-radius: 15px;
+    padding: 1em 1em 0em 1em;
+    margin: 1em;
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+#sidebar {
+    width: 40%;
+    height: auto;
+    background: rgb(235, 235, 235);
+    border-radius: 15px;
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);}
+
+
+/* Connection / Create Account Page */
+
+.signIn {
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    background: rgb(255, 100, 100);
+}
+
+#signInContent {
+    width: 450px;
+    height: 450px;
+    padding: 1em 1em 1em 1em;
+    background: rgb(245, 245, 245);
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+.signIn_intro {
+    height: 35%;
+    text-align: center;
+    background: rgb(240, 240, 240);
+    border-radius: 13px 13px 0px 0px ;
+}
+
+.separator {
+    height: 10%;
+    background: rgb(240, 240, 240);
+    padding:0 30px;
+}
+
+.signIn_Form {
+    width: 100%;
+    height: 55%;
+    background: rgb(240, 240, 240);
+    border-radius: 0px 0px 13px 13px;
+}
+
+.signIn_Form input {
+    width: 80%;
+    Height: 30px;
+    margin-bottom: 8px;
+}
+
+/* My Account Page */
+
+.myPage {
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    width: 100%;
+    background: rgb(255, 100, 100);
+}
+
+#myPageContent {
+    width: 100%;
+    margin: 1em 0em 1em 0em;
+    padding: 1em 1em 1em 1em;
+    background: rgb(245, 245, 245);
+    border-radius: 15px;
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+    border-collapse: collapse;
+}
+
+form {
+    width: 70%;
+}
+
+.MyContentForm {
+    width: 80%;
+    Height: 40px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+#myPageContent.tr {
+    width: 150px;
+}
+
+.separator2 {
+    padding:0 30px;
+}
+
+/* Admin Page */
+
+.myAdmin {
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    width: 100%;
+}
+
+#myPageAdmin {
+    width: 100%;
+    margin: 1em 0em 1em 0em;
+    padding: 1em 1em 1em 1em;
+    background: rgb(245, 245, 245);
+    border-radius: 2px;
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+    border-collapse: collapse;
+}
+
+.adminForm {
+    width: 95%;
+}
+
+.createButton {
+    border: 0;
+    line-height: 2;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    background: #2596be;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6);
+}
+
+.createButton:hover {
+    background-color: rgba(235, 235, 235, 1);
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+    color: black;
+}
+
+.createButton:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6);
+    background: #2596be;
+    color: #fff;
+}
+
+.deleteButton {
+    border: 0;
+    line-height: 2;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    background: rgb(255, 100, 100);
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6);
+}
+
+.deleteButton:hover {
+    background-color: rgba(235, 235, 235, 1);
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+    color: black;
+}
+
+.deleteButton:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6);
+    background: rgb(255, 100, 100);
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 945px) {
+    .menu,
+    .account {
+        display: none;
+    }
+    .menuLite {
+        display: flex;
+        justify-content: center;
+        zoom: 150%;
+        line-height: 44px;
+    }
+    .accountLite {
+        display: flex;
+        justify-content: center;
+        zoom: 150%;
+        line-height: 44px;
+    }
+    #searchContent,
+    #resultsBodyContent {
+        width: 100%;
+    }
+    .div2 {
+        width: 100%;
+    }
+    .learnMoreInfos {
+        height: 330px;
+        overflow: hidden;
+    }
+    .tdlearnM1 {
+        padding: 0em;
+        height: 10px;
+    }
+    .tdlearnM2 {
+        padding: 0em;
+        height: 10px;
+    }
+    .tdlearnM3 {
+        padding: 0em;
+        height: 10px;
+    }
+
+    .div3 {
+        width: 100%;
+    }
+    .applicationCard {
+        height: 330px;
+    }
+
+}
+
+@media only screen and (max-width: 690px) {
+    .menu,
+    .account,
+    #sidebar {
+        display: none;
+    }
+    .menuLite {
+        display: flex;
+        justify-content: center;
+        zoom: 110%;
+        line-height: 60px;
+    }
+    .accountLite {
+        display: flex;
+        justify-content: center;
+        zoom: 120%;
+        line-height: 60px;
+    }
+    #searchContent,
+    #resultsBodyContent,
+    #resultsCol {
+        width: 100%;
+    }
+    #myPageContent {
+        width: 100%;
+        margin: 0em 0em 0em 0em;
+        background: rgb(245, 245, 245);
+        border-radius: 0px;
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+        border-collapse: collapse;
+    }
+    form {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    #signInContent {
+        width: 300px;
+        height: 300px;
+    }
+}

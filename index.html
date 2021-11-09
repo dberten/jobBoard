@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Connection</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/job_cards.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="navigation centered">
+        <div class="logo">
+        <a href="#" title="logo"><img src="img/***.png" title="logo"></a>
+        </div>
+        <a href="#" class= "active" >Bienvenue sur JobBoard !</a>
+    </nav>
+  </header>
+  <div class= "div1"></div>
+  <div class= "signIn">
+    <table id= "signInContent" class="centered">
+        <tbody id= "signInContent" class="centered">
+            <tr>
+                <td class= "signIn_intro">
+                    <h4>Bonjour</h4>
+                    <p>Se connecter ou <a href="src/view/Create_Account.html">créer un compte</a></p>
+                </td>
+            </tr>
+            <tr>
+                <td class= "separator">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <form>
+                    <td class= "signIn_Form">
+                        <div>
+                            <label for="user_mail">Adresse e-mail</label><br>
+                            <input type="email" name="user_mail" id="mail" required>
+                        </div>
+                        <div>
+                            <label>Mot de passe</label><br>
+                            <input type="password" name="password" id="password" required>
+                        </div>
+                        <div>
+                            <input type="submit" class="submitButton" value="Connexion">
+                        </div>
+                        <script type="text/javascript">
+                            $('form').submit(function(e) {
+                                var mail = $("#mail").val();
+                                var pass = $("#password").val();
+                                e.preventDefault()
+                                    $.ajax({
+                                        url: "src/php/login.php",
+                                        data: $('form').serialize(),
+                                        type: "POST",
+                                        data: {
+                                            mail: mail,
+                                            password: pass
+                                        },
+                                        success: function(response) {
+                                            if (response == "error")
+                                                alert("Mauvais identifiants")
+                                            else if (response == "admin")
+                                                location.href = "src/view/Admin.php"
+                                            else
+                                                location.href = "src/view/Job_Board.php"
+                                        },
+                                        error: function(response) {
+                                            alert("The request failed")
+                                        }
+                                    })
+                            })
+                        </script>
+                    </td>
+                </form>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+</body>
+</html>

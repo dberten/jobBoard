@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 100, 100);
+}
+
+.topbar {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #2596be;
+    padding: 20px;
+}
+
+.topbar .logo {
+    float: left;
+}
+
+.logo a {
+    padding: 12px;
+    opacity: .6;
+}
+
+.logo a:hover {
+    opacity: 1;
+}
+
+.container {
+    border: 5px solid #2596be;
+    border-radius: 15px;
+    flex: 1 1 auto;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #2596be;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
